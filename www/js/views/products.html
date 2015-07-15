@@ -1,0 +1,17 @@
+<ion-view view-title="Productos">
+  <ion-nav-buttons side="primary">
+    <button class="button" ng-click="openModal()">
+      add
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="product in products">
+        <img src="{{product.thumbnail}} " alt="imagen" />
+        <h2>{{product.nombre}} {{product.precio}}</h2>
+        <p>{{product.detalle}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

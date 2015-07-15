@@ -1,0 +1,45 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-modal-view class="product edit create">
+  <ion-header-bar class="bar-positive fix-buttons">
+    <a class="button" ng-click="closeModal()">Cancel</a>
+    <h1 class="title">Nuevo Contacto</h1>
+  </ion-header-bar>
+  <ion-content has-bouncing="true">
+    <form ng-submit="AddItem(data)">
+      <div class="list">
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Nombre" ng-model="data.nombre">
+          </label>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Detalle" ng-model="data.detalle">
+          </label>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="number" placeholder="Precio" ng-model="data.precio">
+          </label>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Libro" ng-model="data.catalogo">
+          </label>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="number" placeholder="Pagina" ng-model="data.pagina">
+          </label>
+        </div>
+        <button class="button button-block button-positive" type="submit">
+          Add Item
+        </button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

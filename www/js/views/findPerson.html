@@ -1,0 +1,20 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive fix-buttons">
+      <label>
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="Search">
+      </label>
+      <button class="button button-clear" ng-click="closeModal('modalFindPerson')">
+        Cancel
+      </button>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="person in persons" ng-click="AddSelectedPerson(person)">
+        <img src="{{person.picture.thumbnail}} " alt="imagen" />
+        <h2>{{person.nombre}} {{person.apellido}}</h2>
+        <p>{{person.balance}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>

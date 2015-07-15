@@ -1,0 +1,17 @@
+<ion-view view-title="Contactos">
+  <ion-nav-buttons side="primary">
+      <button class="button" ng-click="openModal()">
+        add
+      </button>
+   </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="person in persons">
+        <img src="{{person.picture.thumbnail}} " alt="imagen" />
+        <h2>{{person.nombre}} {{person.apellido}}</h2>
+        <p>{{person.balance}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

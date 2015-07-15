@@ -1,0 +1,17 @@
+<ion-view view-title="Creditos">
+  <ion-nav-buttons side="primary">
+      <button class="button" ng-click="showAddCredit()">
+        add
+      </button>
+   </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="item in items">
+        <img src="{{item.user.picture.thumbnail}} " alt="imagen" />
+        <h2>{{item.nombre}} {{item.apellido}}</h2>
+        <p>{{item.balance}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
